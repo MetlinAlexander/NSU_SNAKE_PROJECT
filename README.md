@@ -46,14 +46,14 @@ TODO:
 	0xf4 - tail x
 	0xf5 - tail y
 
-	0xff - update screen
+	0xf6 - update screen
 	
 ###### Input:
-	0xf6 - head x
-	0xf7 - head y
-	0xf8 - tail x
-	0xf9 - tail y
-	0xfa - apple x
-	0xfb - apple y
-	0xfc - direction
+	0xf8 - head x
+	0xf9 - head y
+	0xfa - tail x
+	0xfb - tail y
+	0xfc - apple x
+	0xfd - apple y
+	0xfe - direction
 ---------
