@@ -3,6 +3,26 @@ start:
 	setsp 0xaf
 	#spawn apple at the start
 	jsr spawn_apple
+	#input direction
+	ldi r2, 0xee
+	ld r2, r2
+	#save direction to memory
+	jsr load_direction_to_mem
+	#move tail coords
+	ldi r3, 0xfa
+	st r3, r2
+	#start sel reg to 0
+	ldi r3, 0xfd
+	ldi r2, 0
+	st r3, r2
+	if
+		ldi r3, 0xef
+		ld r3, r3
+		tst r3
+	is nz
+		jsr spawn_apple
+		br readkbd # Go back to the start
+	fi	
 readkbd:
 #work with head
 	#input direction
