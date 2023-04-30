@@ -5,14 +5,14 @@ start:
 	setsp 0xaf
 	#spawn apple at the start
 	jsr spawn_apple
-	#start sel reg to 1
-	#ldi r3, 0xfd
-	#ldi r2, 1
-	#st r3, r2
 	#move head
 	jsr move_head
 	#start sel reg to 1
 	ldi r3, 0xfd
+	ldi r2, 1
+	st r3, r2
+	#change screen to game screen
+	ldi r3, 0xf9
 	ldi r2, 1
 	st r3, r2
 #-----------------------
