@@ -43,11 +43,6 @@ main:
 			tst r3
 		is nz #if apple is eaten
 			jsr spawn_apple
-			#paint pixel with new coords
-			#start sel reg to 0
-			#ldi r3, 0xfd
-			#ldi r2, 0
-			#st r3, r2
 			br move_head # Go back to the start
 		else
 			#check for crash
